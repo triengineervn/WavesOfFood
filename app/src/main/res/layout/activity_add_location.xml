@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -9,23 +10,24 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/prompt_add_location"
-        style="@style/TextStyle.Title"
+        style="@style/TextStyle.AppName"
         android:layout_marginTop="@dimen/extra_large"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
         style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
         android:layout_width="match_parent"
         android:layout_height="@dimen/extra_large"
         android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
-        app:endIconDrawable="@drawable/arrow_circle_down"
-        app:endIconTint="@color/text_primary"
+        android:layout_marginTop="@dimen/medium"
+        android:background="@drawable/bg_color_outline"
         app:boxStrokeWidth="0dp"
         app:boxStrokeWidthFocused="0dp"
-        android:background="@drawable/bg_color_outline"
-        android:layout_marginTop="@dimen/medium"
+        app:endIconDrawable="@drawable/arrow_circle_down"
+        app:endIconTint="@color/text_primary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5">
@@ -33,10 +35,24 @@
         <AutoCompleteTextView
             android:id="@+id/listOfLocation"
             style="@style/TextStyle"
-            android:layout_marginHorizontal="@dimen/container_large"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/prompt_add_location"
-            android:inputType="none"/>
+            android:layout_marginHorizontal="@dimen/container_large"
+            android:inputType="none"
+            android:text="@string/prompt_add_location" />
     </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textView6"
+        style="@style/TextStyle.Description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/very_large"
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+        android:text="To provide you with the best dining experience, we need your permission to access your device's location. By enabling location services, we can offer personalized restaurant recommendations, accurate delivery estimates, and ensure a seamless food delivery experience.&quot;"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
