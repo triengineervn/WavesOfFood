@@ -1,31 +1,58 @@
 <resources>
-<!--    activities margin-->
+
+    <!-- Common Dimensions -->
+    <dimen name="space_xxs">4dp</dimen>
+    <dimen name="space_xs">8dp</dimen>
+    <dimen name="space_s">16dp</dimen>
+    <dimen name="space_m">24dp</dimen>
+    <dimen name="space_l">32dp</dimen>
+    <dimen name="space_xl">64dp</dimen>
+    <dimen name="space_xxl">112dp</dimen>
+
+    <!-- Font Sizes -->
+    <dimen name="font_xs">12sp</dimen>
+    <dimen name="font_s">16sp</dimen>
+    <dimen name="font_m">20sp</dimen>
+    <dimen name="font_l">24sp</dimen>
+    <dimen name="font_xl">36sp</dimen>
+
+    <!-- Icon Sizes -->
+    <dimen name="icon_s">14dp</dimen>
+    <dimen name="icon_m">18dp</dimen>
+    <dimen name="icon_l">24dp</dimen>
+
+    <!-- Image Sizes -->
+    <dimen name="image_s">48dp</dimen>
+    <dimen name="image_m">72dp</dimen>
+    <dimen name="image_l">120dp</dimen>
+
+    <!-- Button Width -->
+    <dimen name="button_w_xs">36dp</dimen>
+    <dimen name="button_w_s">72dp</dimen>
+    <dimen name="button_w_m">120dp</dimen>
+    <dimen name="button_w_l">160dp</dimen>
+    <dimen name="button_w_xl">240dp</dimen>"
+
+    <!-- Specific Component Dimensions -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
-<!--    text size-->
-    <dimen name="text_size_small">12sp</dimen>
-    <dimen name="text_size_medium">16sp</dimen>
-    <dimen name="text_size_large">20sp</dimen>
-    <dimen name="text_size_very_large">24sp</dimen>
-    <dimen name="text_size_extra_large">36sp</dimen>
-<!--    dimensions-->
-    <dimen name="small">8dp</dimen>
-    <dimen name="medium">16dp</dimen>
-    <dimen name="large">24dp</dimen>
-    <dimen name="very_large">32dp</dimen>
-    <dimen name="extra_large">64dp</dimen>
-    <dimen name="mega_large">112dp</dimen>
-<!--    padding or margin in containers-->
-    <dimen name="container_very_small">1dp</dimen>
-    <dimen name="container_small">2dp</dimen>
-    <dimen name="container_medium">4dp</dimen>
-    <dimen name="container_large">8dp</dimen>
-    <dimen name="container_very_large">16dp</dimen>
-    <dimen name="container_extra_large">16dp</dimen>
-<!--dimensions button-->
-    <dimen name="btn_small">64dp</dimen>
-    <dimen name="btn_medium">96dp</dimen>
-    <dimen name="btn_large">128dp</dimen>
-    <dimen name="btn_very_large">160dp</dimen>
-    <dimen name="btn_extra_large">224dp</dimen>
+    <dimen name="toolbar_height">56dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="text_input">48dp</dimen>
+    <dimen name="card_view_height">200dp</dimen>
+    <dimen name="list_view_height">400dp</dimen>"
+    <!-- Corner -->
+    <dimen name="conner_s">8dp</dimen>"
+    <dimen name="conner_m">16dp</dimen>
+    <dimen name="conner_full">360dp</dimen>
+
+    <!-- Stroke -->
+    <dimen name="stroke_s">0.5dp</dimen>
+    <dimen name="stroke_m">1dp</dimen>
+    <dimen name="stroke_l">2dp</dimen>
+
+    <!-- Elevation -->
+    <dimen name="elevation_s">4dp</dimen>
+    <dimen name="elevation_m">8dp</dimen>
+    <dimen name="elevation_l">16dp</dimen>
 </resources>

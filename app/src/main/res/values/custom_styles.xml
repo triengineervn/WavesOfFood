@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <!-- Text Input -->
+    <style name="CustomStyle.WavesOfFood.NoUnderlineAutoCompleteTextView" parent="CustomStyle">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textCursorDrawable">@null</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:layout_marginHorizontal">@dimen/activity_horizontal_margin</item>
+    </style>
+
+    <style name="CustomStyle.WavesOfFood.TextInput" parent="Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+        <item name="android:background">@drawable/background_outline</item>
+        <item name="android:layout_marginHorizontal">@dimen/activity_horizontal_margin</item>
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="boxStrokeWidthFocused">0dp</item>
+    </style>
+
+    <style name="CustomStyle.WavesOfFood.EditText" parent="CustomStyle">
+        <item name="android:textColorHint">@color/text_hint</item>
+        <item name="android:drawablePadding">@dimen/activity_horizontal_margin</item>
+        <item name="android:elevation">@dimen/elevation_s</item>
+        <item name="android:padding">@dimen/activity_horizontal_margin</item>
+        <item name="android:background">@drawable/background_surface</item>
+    </style>
+
+    <style name="CustomStyle.WavesOfFood.ElevationIconButton" parent="CustomStyle">
+        <item name="android:width">@dimen/button_w_l</item>
+        <item name="android:background">@drawable/background_elevation_btn</item>
+        <item name="android:drawablePadding">@dimen/space_xs</item>
+        <item name="android:paddingHorizontal">@dimen/space_m</item>
+        <item name="android:paddingVertical">@dimen/space_m</item>
+        <item name="android:textAppearance">@style/TextAppearance.WavesOfFood.ElevationButton</item>
+    </style>
+
+    <style name="CustomStyle.WavesOfFood.PrimaryButton" parent="CustomStyle">
+        <item name="android:width">@dimen/button_w_l</item>
+        <item name="android:background">@drawable/background_primary_btn</item>
+        <item name="android:drawablePadding">@dimen/activity_horizontal_margin</item>
+        <item name="android:paddingHorizontal">@dimen/space_l</item>
+        <item name="android:paddingVertical">@dimen/space_m</item>
+        <item name="android:textAppearance">@style/TextAppearance.WavesOfFood.PrimaryButton</item>
+    </style>
+
+    <style name="CustomStyle.WavesOfFood.PrimaryButton.Small" parent="CustomStyle">
+        <item name="android:width">@dimen/button_w_s</item>
+        <item name="android:background">@drawable/background_primary_btn_s</item>
+        <item name="android:drawablePadding">@dimen/activity_horizontal_margin</item>
+        <item name="android:paddingHorizontal">@dimen/space_xs</item>
+        <item name="android:textAppearance">@style/TextAppearance.WavesOfFood.PrimaryButton.Small</item>
+    </style>
+
+</resources>

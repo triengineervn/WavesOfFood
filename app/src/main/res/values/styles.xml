@@ -1,59 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<resources >
-    <!-- Base Text Style -->
-    <style name="TextStyle">
+<resources>
+    <!-- Base Text Styles -->
+    <style name="TextAppearance.WavesOfFood" parent="TextAppearance.MaterialComponents.Body1">
         <item name="android:textColor">@color/text_primary</item>
-        <item name="android:textSize">@dimen/text_size_medium</item>
-        <item name="android:fontFamily">@font/lato_regular</item>
+        <item name="android:textSize">@dimen/font_m</item>
+        <item name="fontFamily">@font/lato_regular</item>
     </style>
 
-    <!-- Title Text Style -->
-    <style name="TextStyle.Title">
-        <item name="android:textColor">@color/text_primary</item>
-        <item name="android:textSize">@dimen/text_size_very_large</item>
-        <item name="android:fontFamily">@font/lato_bold</item>
-    </style>
+    <!-- Common custom style-->
+    <style name="CustomStyle"/>
 
-    <!-- Sub Title Text Style -->
-    <style name="TextStyle.SubTitle">
-        <item name="android:textColor">@color/text_primary</item>
-        <item name="android:textSize">@dimen/text_size_large</item>
-        <item name="android:fontFamily">@font/lato_bold</item>
-    </style>
-
-    <!-- Description Text Style -->
-    <style name="TextStyle.Description">
-        <item name="android:textColor">@color/text_secondary</item>
-        <item name="android:textSize">@dimen/text_size_small</item>
-    </style>
-
-    <!-- App name Text Style -->
-    <style name="TextStyle.AppName">
-        <item name="android:textColor">@color/text_primary</item>
-        <item name="android:textSize">@dimen/text_size_extra_large</item>
-        <item name="android:fontFamily">@font/yeon_sung_regular</item>
-    </style>
-
-    <!-- Annotation Text Style -->
-    <style name="TextStyle.Annotation">
-        <item name="android:textColor">@color/text_highlight</item>
-        <item name="android:textSize">@dimen/text_size_medium</item>
-        <item name="android:fontFamily">@font/lato_bold</item>
-    </style>
-
-    <!-- Button Text Style -->
-    <style name="TextStyle.Button">
-        <item name="android:textColor">@color/text_inverse</item>
-        <item name="android:textSize">@dimen/text_size_large</item>
-        <item name="android:fontFamily">@font/yeon_sung_regular</item>
-        <item name="android:textAlignment">center</item>
-    </style>
-
-    <!-- Theme Background -->
-    <style name="Base.Theme.WavesOfFood" parent="Theme.Material3.DayNight.NoActionBar">
-        <item name="android:statusBarColor">@color/theme_primary</item>
-        <item name="android:background">@color/theme_background</item>
-    </style>
-
-    <style name="Theme.WavesOfFood" parent="Base.Theme.WavesOfFood" />
 </resources>

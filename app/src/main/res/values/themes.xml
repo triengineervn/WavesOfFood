@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <!-- Theme -->
+    <style name="Theme.WavesOfFood" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorAccent">@color/secondary</item>
+        <item name="android:windowBackground">@color/background</item>
+        <item name="android:statusBarColor">@color/primary</item>
+
+        <!-- Text Appearances -->
+        <item name="textAppearanceBody1">@style/TextAppearance.WavesOfFood.Body</item>
+        <item name="textAppearanceBody2">@style/TextAppearance.WavesOfFood.Small</item>
+        <item name="textAppearanceCaption">@style/TextAppearance.WavesOfFood.Caption</item>
+        <item name="textAppearanceButton">@style/TextAppearance.WavesOfFood.PrimaryButton</item>
+        <item name="textAppearanceSubtitle1">@style/TextAppearance.WavesOfFood.Subtitle</item>
+        <item name="textAppearanceSubtitle2">@style/TextAppearance.WavesOfFood.Medium</item>
+        <item name="textAppearanceHeadline6">@style/TextAppearance.WavesOfFood.Title</item>
+        <item name="textAppearanceHeadline5">@style/TextAppearance.WavesOfFood.XLarge</item>
+    </style>
+</resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="@string/prompt_home" android:icon="@drawable/home_icon" android:id="@+id/homeFragment"/>
+    <item android:title="@string/prompt_cart" android:icon="@drawable/cart_icon" android:id="@+id/cartFragment"/>
+    <item android:title="@string/prompt_search" android:icon="@drawable/search_icon" android:id="@+id/searchFragment"/>
+    <item android:title="@string/prompt_history" android:icon="@drawable/history_icon" android:id="@id/historyFragment"/>
+    <item android:title="@string/prompt_profile" android:icon="@drawable/profile_icon" android:id="@id/profileFragment"/>
+</menu>

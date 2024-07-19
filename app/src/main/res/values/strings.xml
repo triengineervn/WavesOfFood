@@ -3,7 +3,9 @@
     <string name="slogan_splash">Deliver Favorite Food</string>
     <string name="slogan_start">Enjoy Restaurant Quality Meals\n at Home</string>
     <string name="title_activity_start">StartActivity</string>
-    <string name="next">Next</string>
+    <string name="title_activity_home">Explore Your Favorite Food</string>
+    <!--    prompt-->
+    <string name="prompt_next">Next</string>
     <string name="prompt_name">Name</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_email_phone">Email or Phone number</string>
@@ -13,6 +15,16 @@
     <string name="prompt_login">Login</string>
     <string name="prompt_sign_up">Sign Up</string>
     <string name="prompt_create_account">Create Account</string>
+    <string name="prompt_welcome">"Welcome !"</string>
+    <string name="prompt_home">Home</string>
+    <string name="prompt_cart">Cart</string>
+    <string name="prompt_search">Search</string>
+    <string name="prompt_history">History</string>
+    <string name="prompt_profile">Profile</string>
+    <string name="prompt_popular">Popular</string>
+    <string name="prompt_view_menu">View Menu</string>
+    <!--    action-->
+    <string name="action_proceed">Proceed</string>
     <string name="action_login">Login to your account</string>
     <string name="action_sign_up">Sign up here</string>
     <string name="action_sign_in">Sign in or register</string>
@@ -20,11 +32,12 @@
     <string name="action_sign_up_with">Or\n<b>Sign up with</b></string>
     <string name="action_not_account"><u>Don\'t have account?</u></string>
     <string name="action_have_account"><u>Already have account?</u></string>
-    <string name="welcome">"Welcome !"</string>
+    <string name="action_add_location">Choose Your Location</string>
+    <string name="action_add_to_cart">Add to Cart</string>
+    <!--    invalid-->
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
-    <string name="login_failed">"Login failed"</string>
-    <string name="prompt_add_location">Choose Your Location</string>
+    <string name="invalid_login_failed">"Login failed"</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="default_web_client_id">407236622916-09rkefthrdrvda5p9igbvcsljs62avgh.apps.googleusercontent.com</string>

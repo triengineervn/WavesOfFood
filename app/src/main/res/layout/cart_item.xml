@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/space_xs"
+                android:background="@drawable/background_elevation"
+                android:elevation="@dimen/elevation_s"
+                android:padding="@dimen/space_s">
+
+                <ImageView
+                    android:id="@+id/cartImage"
+                    android:layout_width="@dimen/image_m"
+                    android:layout_height="@dimen/image_m"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/menu_photo_1" />
+
+                <TextView
+                    android:id="@+id/cartName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_m"
+                    android:layout_marginTop="@dimen/space_s"
+                    android:text="Text View"
+                    android:textAppearance="@style/TextAppearance.WavesOfFood.Name"
+                    app:layout_constraintStart_toEndOf="@+id/cartImage"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/cartPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$7"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.WavesOfFood.Price"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/cartName"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="@+id/cartName"
+                    app:layout_constraintTop_toBottomOf="@+id/cartName"
+                    app:layout_constraintVertical_bias="0.5" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatImageButton
+                            android:id="@+id/decreaseQuantityBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:padding="@dimen/space_xs"
+                            android:background="@drawable/background_primary_btn_s"
+                            app:srcCompat="@drawable/mains_icon" />
+
+                        <TextView
+                            android:id="@+id/cartQuantity"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="1"
+                            android:paddingHorizontal="@dimen/space_m"
+                            android:textAlignment="center"
+                            android:textAppearance="@style/TextAppearance.WavesOfFood.Subtitle" />
+
+                        <androidx.appcompat.widget.AppCompatImageButton
+                            android:id="@+id/increaseQuantityBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:padding="@dimen/space_xs"
+                            android:background="@drawable/background_primary_btn_s"
+                            app:srcCompat="@drawable/plus_icon" />
+                    </LinearLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatImageButton
+                            android:id="@+id/deleteBtn"
+                            style="@style/CustomStyle.WavesOfFood.ElevationIconButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/button_w_xs"
+                            android:layout_marginTop="@dimen/space_s"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/delete_icon" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

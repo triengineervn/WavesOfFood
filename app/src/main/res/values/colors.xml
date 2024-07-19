@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<!--    Text Colors-->
+    <!-- Text Colors -->
     <color name="text_primary">#212121</color>
     <color name="text_secondary">#757575</color>
-    <color name="text_highlight">#009688</color>
+    <color name="text_highlight">#53E88B</color>
     <color name="text_hint">#9E9E9E</color>
     <color name="text_disabled">#BDBDBD</color>
     <color name="text_error">#D32F2F</color>
@@ -12,31 +12,20 @@
     <color name="text_info">#2196F3</color>
     <color name="text_inverse">#FFFFFF</color>
 
-<!--    Theme Colors-->
-    <!-- Primary Theme Colors -->
-    <color name="theme_primary">#53E88B</color>
-    <color name="theme_primary_dark">#388E3C</color>
-    <color name="theme_primary_light">#A5D6A7</color>
-
-    <!-- Secondary Theme Colors -->
-    <color name="theme_secondary">#009688</color>
-    <color name="theme_secondary_dark">#00796B</color>
-    <color name="theme_secondary_light">#B2DFDB</color>
-
-    <!-- Background and Surface Colors -->
-    <color name="theme_background">#FFFFFF</color>
-    <color name="theme_surface">#F5F5F5</color>
-
-    <!-- Other Colors -->
-    <color name="theme_error">#D32F2F</color>
-    <color name="theme_warning">#FFA000</color>
-    <color name="theme_success">#4CAF50</color>
-    <color name="theme_info">#2196F3</color>
-
-    <!-- Overlay Colors (used for elevated surfaces, modal backgrounds) -->
-    <color name="theme_overlay">#80000000</color> <!-- 50% transparent black -->
-
-    <!-- Divider and Border Colors -->
-    <color name="theme_divider">#BDBDBD</color>
-    <color name="theme_border">#E0E0E0</color>
+    <!-- Theme Colors -->
+    <color name="primary">#53E88B</color>
+    <color name="primary_dark">#388E3C</color>
+    <color name="primary_light">#A5D6A7</color>
+    <color name="secondary">#009688</color>
+    <color name="secondary_dark">#00796B</color>
+    <color name="secondary_light">#B2DFDB</color>
+    <color name="background">#FFFFFF</color>
+    <color name="surface">#F5F5F5</color>
+    <color name="error">#D32F2F</color>
+    <color name="warning">#FFA000</color>
+    <color name="success">#4CAF50</color>
+    <color name="info">#2196F3</color>
+    <color name="overlay">#80000000</color>
+    <color name="divider">#BDBDBD</color>
+    <color name="border">#E0E0E0</color>
 </resources>

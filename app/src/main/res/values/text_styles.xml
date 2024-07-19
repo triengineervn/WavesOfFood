@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <style name="TextAppearance.WavesOfFood.XSmall" parent="TextAppearance.WavesOfFood">
+        <item name="android:textSize">@dimen/font_xs</item>
+    </style>
+
+    <style name="TextAppearance.WavesOfFood.Small" parent="TextAppearance.WavesOfFood">
+        <item name="android:textSize">@dimen/font_s</item>
+    </style>
+
+    <style name="TextAppearance.WavesOfFood.Medium" parent="TextAppearance.WavesOfFood">
+        <item name="android:textSize">@dimen/font_m</item>
+    </style>
+
+    <style name="TextAppearance.WavesOfFood.Large" parent="TextAppearance.WavesOfFood">
+        <item name="android:textSize">@dimen/font_l</item>
+    </style>
+
+    <style name="TextAppearance.WavesOfFood.XLarge" parent="TextAppearance.WavesOfFood">
+        <item name="android:textSize">@dimen/font_xl</item>
+    </style>
+
+    <style name="TextAppearance.WavesOfFood.Title" parent="TextAppearance.WavesOfFood.XLarge">
+        <item name="fontFamily">@font/lato_bold</item>
+        <item name="android:textColor">@color/text_highlight</item>
+    </style>
+
+    <style name="TextAppearance.WavesOfFood.Subtitle" parent="TextAppearance.WavesOfFood.Large">
+        <item name="fontFamily">@font/lato_bold</item>
+    </style>
+
+    <style name="TextAppearance.WavesOfFood.Body" parent="TextAppearance.WavesOfFood.Medium">
+        <item name="android:textColor">@color/text_secondary</item>
+    </style>
+
+    <style name="TextAppearance.WavesOfFood.Caption" parent="TextAppearance.WavesOfFood.Small">
+        <item name="android:textColor">@color/text_secondary</item>
+    </style>
+
+    <style name="TextAppearance.WavesOfFood.Name" parent="TextAppearance.WavesOfFood.Medium">
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="fontFamily">@font/yeon_sung_regular</item>
+    </style>
+
+    <style name="TextAppearance.WavesOfFood.Price" parent="TextAppearance.WavesOfFood.Medium">
+        <item name="android:textColor">@color/text_highlight</item>
+    </style>
+
+    <style name="TextAppearance.WavesOfFood.Highlight" parent="TextAppearance.WavesOfFood.Small">
+        <item name="android:textColor">@color/text_highlight</item>
+    </style>
+
+    <style name="TextAppearance.WavesOfFood.PrimaryButton" parent="TextAppearance.WavesOfFood.Small">
+        <item name="android:textColor">@color/text_inverse</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="TextAppearance.WavesOfFood.PrimaryButton.Small" parent="TextAppearance.WavesOfFood.XSmall">
+        <item name="android:textColor">@color/text_inverse</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="TextAppearance.WavesOfFood.ElevationButton" parent="TextAppearance.WavesOfFood.Small">
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+</resources>
