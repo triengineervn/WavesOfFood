@@ -29,15 +29,20 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentHomeBinding.inflate(inflater, container, false)
+
+        binding.viewMenuBtn.setOnClickListener {
+            val bottomSheetDialog = MenuBottomSheetFragment()
+            bottomSheetDialog.show(parentFragmentManager, "Test")
+        }
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val imageList = ArrayList<SlideModel>()
-        imageList.add(SlideModel(R.drawable.banner1,ScaleTypes.FIT))
-        imageList.add(SlideModel(R.drawable.banner2,ScaleTypes.FIT))
-        imageList.add(SlideModel(R.drawable.banner3,ScaleTypes.FIT))
+        imageList.add(SlideModel(R.drawable.banner1, ScaleTypes.FIT))
+        imageList.add(SlideModel(R.drawable.banner2, ScaleTypes.FIT))
+        imageList.add(SlideModel(R.drawable.banner3, ScaleTypes.FIT))
 
         val imageSlider = binding.imageSlider
         imageSlider.setImageList(imageList)
@@ -49,7 +54,7 @@ class HomeFragment : Fragment() {
             override fun onItemSelected(position: Int) {
                 val itemPosition = imageList[position]
                 val itemMessage = "Selected Image $position"
-                Toast.makeText(requireContext(),itemMessage, Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), itemMessage, Toast.LENGTH_SHORT).show()
             }
 
         })
