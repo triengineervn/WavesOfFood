@@ -28,7 +28,7 @@
             android:layout_height="match_parent"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.WavesOfFood.Subtitle"
-            android:text="@string/prompt_cart" />
+            android:text="@string/concise_cart" />
 
 
     </LinearLayout>

@@ -41,7 +41,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/space_m"
-            android:text="@string/prompt_popular"
+            android:text="@string/concise_popular"
             android:textAppearance="@style/TextAppearance.WavesOfFood.Subtitle" />
 
         <Space
@@ -59,7 +59,7 @@
             android:background="@drawable/background_elevation"
             android:elevation="@dimen/elevation_s"
             android:padding="@dimen/space_xs"
-            android:text="@string/prompt_view_menu"
+            android:text="@string/concise_view_menu"
             android:textAppearance="@style/TextAppearance.WavesOfFood.Highlight" />
     </LinearLayout>
 

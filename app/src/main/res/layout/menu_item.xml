@@ -61,7 +61,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/button_w_xs"
                     android:layout_marginTop="@dimen/space_xs"
-                    android:text="@string/action_add_to_cart" />
+                    android:text="@string/prompt_add_to_cart" />
             </LinearLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>

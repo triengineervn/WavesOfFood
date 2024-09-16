@@ -33,7 +33,7 @@
         android:id="@+id/nextBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/prompt_next"
+        android:text="@string/concise_next"
         style="@style/CustomStyle.WavesOfFood.PrimaryButton"
         android:layout_marginTop="@dimen/space_xl"
         app:layout_constraintStart_toStartOf="@+id/textView3"

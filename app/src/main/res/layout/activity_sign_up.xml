@@ -19,19 +19,19 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/action_sign_up"
+        android:text="@string/prompt_sign_up"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
         android:layout_marginTop="@dimen/space_xs"
-        android:textAppearance="@style/TextAppearance.WavesOfFood.Subtitle"/>
+        android:textAppearance="@style/TextAppearance.WavesOfFood.Subtitle" />
 
     <EditText
         android:id="@+id/editTextName"
         android:layout_width="match_parent"
         android:layout_height="@dimen/space_xl"
         android:inputType="textPersonName"
-        android:hint="@string/prompt_name"
+        android:hint="@string/concise_name"
         android:drawableStart="@drawable/user_icon"
         style="@style/CustomStyle.WavesOfFood.EditText"
         android:layout_marginTop="@dimen/space_m"
@@ -45,7 +45,7 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/space_xl"
         android:inputType="textEmailAddress"
-        android:hint="@string/prompt_email_phone"
+        android:hint="@string/concise_email_phone"
         android:drawableStart="@drawable/gmail_icon"
         style="@style/CustomStyle.WavesOfFood.EditText"
         android:layout_marginTop="@dimen/space_s"
@@ -60,7 +60,7 @@
         android:layout_height="@dimen/space_xl"
         android:ems="10"
         android:inputType="textPassword"
-        android:hint="@string/prompt_password"
+        android:hint="@string/concise_password"
         android:drawableStart="@drawable/lock_icon"
         android:drawableEnd="@drawable/eye_slash_icon"
         style="@style/CustomStyle.WavesOfFood.EditText"
@@ -68,19 +68,19 @@
         android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
         app:layout_constraintEnd_toEndOf="@+id/editTextEmailAddress"
         app:layout_constraintStart_toStartOf="@+id/editTextEmailAddress"
-        app:layout_constraintTop_toBottomOf="@+id/editTextEmailAddress"/>
+        app:layout_constraintTop_toBottomOf="@+id/editTextEmailAddress" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/action_sign_up_with"
+        android:text="@string/prompt_sign_up_with"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.WavesOfFood.Small"
         android:layout_marginTop="@dimen/space_m"
         app:layout_constraintEnd_toEndOf="@+id/editTextPassword"
         app:layout_constraintStart_toStartOf="@+id/editTextPassword"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPassword"/>
+        app:layout_constraintTop_toBottomOf="@+id/editTextPassword" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/googleBtn"
@@ -89,7 +89,7 @@
         android:layout_marginTop="@dimen/space_s"
         android:drawableStart="@drawable/google_icon"
         style="@style/CustomStyle.WavesOfFood.ElevationIconButton"
-        android:text="@string/prompt_google"
+        android:text="@string/concise_google"
         app:layout_constraintEnd_toStartOf="@+id/facebookBtn"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
@@ -101,7 +101,7 @@
         android:layout_marginTop="@dimen/space_s"
         android:drawableStart="@drawable/facebook_icon"
         style="@style/CustomStyle.WavesOfFood.ElevationIconButton"
-        android:text="@string/prompt_facebook"
+        android:text="@string/concise_facebook"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.337"
         app:layout_constraintStart_toEndOf="@+id/googleBtn"
@@ -113,7 +113,7 @@
         android:layout_width="@dimen/button_w_xl"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/space_m"
-        android:text="@string/prompt_create_account"
+        android:text="@string/concise_create_account"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/googleBtn" />
@@ -123,7 +123,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/space_s"
-        android:text="@string/action_have_account"
+        android:text="@string/prompt_have_account"
         android:textAppearance="@style/TextAppearance.WavesOfFood.Caption"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
