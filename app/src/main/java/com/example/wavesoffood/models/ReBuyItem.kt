@@ -1,6 +1,6 @@
 package com.example.wavesoffood.models
 
-data class PopularItem(
+data class ReBuyItem(
     val reBuyName: String,
     val reBuyPrice: String,
     val reBuyImageResId: Int

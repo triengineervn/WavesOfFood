@@ -1,7 +1,7 @@
 package com.example.wavesoffood.models
 
 data class MenuItem(
-    val name: String,
-    val price: String,
-    val imageResId: Int
-)
+    val reBuyName: String,
+    val reBuyPrice: String,
+    val reBuyImageResId: Int
+) : BaseItem(reBuyName, reBuyPrice, reBuyImageResId)

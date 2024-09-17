@@ -23,6 +23,8 @@
     <string name="concise_profile">Profile</string>
     <string name="concise_popular">Popular</string>
     <string name="concise_view_menu">View Menu</string>
+    <string name="concise_menu">Menu</string>
+    <string name="concise_recent_buy">Recent buy</string>
 
     <!--    prompt-->
     <string name="prompt_login">Login to your account</string>
@@ -35,6 +37,7 @@
     <string name="prompt_add_location">Choose Your Location</string>
     <string name="prompt_add_to_cart">Add to Cart</string>
     <string name="prompt_search">What do you want to order?</string>
+    <string name="prompt_re_buy">Buy again</string>
 
     <!--    action-->
     <string name="action_proceed">Proceed</string>
@@ -46,5 +49,5 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="default_web_client_id">407236622916-09rkefthrdrvda5p9igbvcsljs62avgh.apps.googleusercontent.com</string>
-    <string name="concise_menu">Menu</string>
+    <string name="concise_buy_again">Buy again</string>
 </resources>

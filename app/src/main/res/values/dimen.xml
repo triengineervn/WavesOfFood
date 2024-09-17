@@ -42,9 +42,9 @@
     <dimen name="card_view_height">200dp</dimen>
     <dimen name="list_view_height">400dp</dimen>"
     <!-- Corner -->
-    <dimen name="conner_s">8dp</dimen>"
-    <dimen name="conner_m">16dp</dimen>
-    <dimen name="conner_full">360dp</dimen>
+    <dimen name="corner_s">8dp</dimen>"
+    <dimen name="corner_m">16dp</dimen>
+    <dimen name="corner_full">360dp</dimen>
 
     <!-- Stroke -->
     <dimen name="stroke_s">0.5dp</dimen>

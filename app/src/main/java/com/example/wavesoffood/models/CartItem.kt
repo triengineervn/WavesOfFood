@@ -1,8 +1,8 @@
 package com.example.wavesoffood.models
 
-data class CartItem(
-    val name: String,
-    val price: String,
-    val imageResId: Int,
-    var quantity: Int
-)
+class CartItem(
+    name: String,
+    price: String,
+    imageResId: Int,
+    var quantity: Int = 1
+) : BaseItem(name, price, imageResId)
