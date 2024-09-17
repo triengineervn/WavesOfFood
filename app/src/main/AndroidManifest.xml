@@ -19,18 +19,19 @@
         </activity>
         <activity
             android:name=".activities.StartActivity"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".activities.LoginActivity"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".activities.SignUpActivity"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".activities.AddLocationActivity"
             android:exported="true" />
         <activity
             android:name=".activities.MainActivity"
+            android:windowSoftInputMode="adjustPan|adjustResize"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

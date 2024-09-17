@@ -46,7 +46,17 @@
         <item name="android:background">@drawable/background_primary_btn_s</item>
         <item name="android:drawablePadding">@dimen/activity_horizontal_margin</item>
         <item name="android:paddingHorizontal">@dimen/space_xs</item>
-        <item name="android:textAppearance">@style/TextAppearance.WavesOfFood.PrimaryButton.Small</item>
+        <item name="android:textAppearance">@style/TextAppearance.WavesOfFood.PrimaryButton.Small
+        </item>
+    </style>
+
+    <style name="CustomStyle.WavesOfFood.ElevationButton" parent="CustomStyle">
+        <item name="android:width">@dimen/button_w_l</item>
+        <item name="android:background">@drawable/background_elevation_btn</item>
+        <item name="android:drawablePadding">@dimen/activity_horizontal_margin</item>
+        <item name="android:paddingHorizontal">@dimen/space_l</item>
+        <item name="android:paddingVertical">@dimen/space_m</item>
+        <item name="android:textAppearance">@style/TextAppearance.WavesOfFood.Highlight</item>
     </style>
 
 </resources>

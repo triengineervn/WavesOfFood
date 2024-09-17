@@ -39,11 +39,13 @@
     <dimen name="toolbar_height">56dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="text_input">48dp</dimen>
+    <dimen name="title_spacing">72dp</dimen>
     <dimen name="card_view_height">200dp</dimen>
     <dimen name="list_view_height">400dp</dimen>"
     <!-- Corner -->
     <dimen name="corner_s">8dp</dimen>"
     <dimen name="corner_m">16dp</dimen>
+    <dimen name="corner_l">24dp</dimen>
     <dimen name="corner_full">360dp</dimen>
 
     <!-- Stroke -->

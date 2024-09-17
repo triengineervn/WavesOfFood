@@ -25,6 +25,9 @@
     <string name="concise_view_menu">View Menu</string>
     <string name="concise_menu">Menu</string>
     <string name="concise_recent_buy">Recent buy</string>
+    <string name="concise_buy_again">Buy again</string>
+    <string name="concise_address">Address</string>
+    <string name="concise_phone">Phone</string>
 
     <!--    prompt-->
     <string name="prompt_login">Login to your account</string>
@@ -38,7 +41,7 @@
     <string name="prompt_add_to_cart">Add to Cart</string>
     <string name="prompt_search">What do you want to order?</string>
     <string name="prompt_re_buy">Buy again</string>
-
+    <string name="prompt_save_info">Save Information</string>
     <!--    action-->
     <string name="action_proceed">Proceed</string>
 
@@ -46,8 +49,13 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="invalid_login_failed">"Login failed"</string>
-    <!-- TODO: Remove or change this placeholder text -->
+
+    <!--other-->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="default_web_client_id">407236622916-09rkefthrdrvda5p9igbvcsljs62avgh.apps.googleusercontent.com</string>
-    <string name="concise_buy_again">Buy again</string>
+    <string name="lorem_ipsum_short">Lorem ipsum</string>
+    <string name="lorem_ipsum_email">loremipsum@email.com</string>
+    <string name="lorem_ipsum_long">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</string>
+    <string name="lorem_ipsum_phone">0123456789</string>
+    <string name="concise_notification">Notification</string>
 </resources>
