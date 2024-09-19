@@ -43,6 +43,7 @@
     <dimen name="long_title_spacing">160dp</dimen>
     <dimen name="card_view_height">200dp</dimen>
     <dimen name="list_view_height">400dp</dimen>"
+    <dimen name="medium_photo">240dp</dimen>
     <dimen name="big_photo">300dp</dimen>
     <!-- Corner -->
     <dimen name="corner_s">8dp</dimen>"

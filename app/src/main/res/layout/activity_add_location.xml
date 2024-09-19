@@ -42,7 +42,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/space_l"
         android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
-        android:text="To provide you with the best dining experience, we need your permission to access your device's location. By enabling location services, we can offer personalized restaurant recommendations, accurate delivery estimates, and ensure a seamless food delivery experience.&quot;"
+        android:text="@string/prompt_choose_location"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

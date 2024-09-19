@@ -1,5 +1,6 @@
 package com.example.wavesoffood.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -11,6 +12,8 @@ import com.denzcoskun.imageslider.constants.ScaleTypes
 import com.denzcoskun.imageslider.interfaces.ItemClickListener
 import com.denzcoskun.imageslider.models.SlideModel
 import com.example.wavesoffood.R
+import com.example.wavesoffood.activities.DetailsActivity
+import com.example.wavesoffood.activities.PaymentActivity
 import com.example.wavesoffood.adapters.PopularAdapter
 import com.example.wavesoffood.databinding.FragmentHomeBinding
 import com.example.wavesoffood.models.PopularItem
@@ -66,9 +69,11 @@ class HomeFragment : Fragment() {
             PopularItem("Chicken", "$10", R.drawable.menu_photo_1),
         )
 
-        val adapter = PopularAdapter { item, _ ->
-            Toast.makeText(context, "Go to detail ${item.name}", Toast.LENGTH_SHORT).show()
-        }
+        val adapter = PopularAdapter(
+            { item, _ ->
+                Toast.makeText(context, "Go to detail ${item.name}", Toast.LENGTH_SHORT).show()
+            }, requireContext()
+        )
         binding.popularRecyclerView.layoutManager = LinearLayoutManager(requireContext())
         binding.popularRecyclerView.adapter = adapter
         adapter.setData(popularItems)

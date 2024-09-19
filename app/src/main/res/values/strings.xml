@@ -63,6 +63,7 @@
     <string name="lorem_ipsum_email">loremipsum@email.com</string>
     <string name="lorem_ipsum_long">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</string>
     <string name="lorem_ipsum_phone">0123456789</string>
+    <string name="prompt_choose_location">To provide you with the best dining experience, we need your permission to access your device\'s location. By enabling location services, we can offer personalized restaurant recommendations, accurate delivery estimates, and ensure a seamless food delivery experience.\"</string>
 
 
 </resources>

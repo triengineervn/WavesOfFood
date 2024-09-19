@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.DetailsActivity">
+
+    <LinearLayout
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/backBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/background"
+                app:srcCompat="@drawable/back_arrow_icon" />
+
+            <TextView
+                android:id="@+id/foodName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.WavesOfFood.Title"
+                android:text="Text View" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/foodImage"
+            android:layout_marginTop="@dimen/space_s"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/medium_photo"
+            android:src="@drawable/big_image" />
+
+        <TextView
+            android:layout_marginTop="@dimen/space_s"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/lorem_ipsum_short"
+            android:textAppearance="@style/TextAppearance.WavesOfFood.Name" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/lorem_ipsum_long"
+            android:textAppearance="@style/TextAppearance.WavesOfFood.Caption" />
+
+        <TextView
+            android:layout_marginTop="@dimen/space_s"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/lorem_ipsum_short"
+            android:textAppearance="@style/TextAppearance.WavesOfFood.Name" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            tools:listitem="@layout/ingredient_item"
+            android:id="@+id/ingredientRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+
+        android:id="@+id/placeOrderBtn"
+        android:layout_margin="@dimen/space_s"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        style="@style/CustomStyle.WavesOfFood.PrimaryButton"
+        android:text="@string/prompt_add_to_cart" />
+</FrameLayout>
+
+
