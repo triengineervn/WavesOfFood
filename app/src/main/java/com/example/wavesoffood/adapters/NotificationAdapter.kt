@@ -6,9 +6,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.wavesoffood.databinding.NotificationItemBinding
 import com.example.wavesoffood.models.NotificationItem
 
-class NotificationAdapter(private var notification: MutableList<NotificationItem>) :
+class NotificationAdapter(private val notification: MutableList<NotificationItem>) :
     RecyclerView.Adapter<NotificationAdapter.NotificationViewHolder>() {
-    inner class NotificationViewHolder(private val binding: NotificationItemBinding) :
+    inner class NotificationViewHolder(private var binding: NotificationItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(position: Int) {
             binding.apply {
@@ -19,8 +19,11 @@ class NotificationAdapter(private var notification: MutableList<NotificationItem
 
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NotificationViewHolder {
-        var binding =
+    override fun onCreateViewHolder(
+        parent: ViewGroup,
+        viewType: Int
+    ): NotificationAdapter.NotificationViewHolder {
+        val binding =
             NotificationItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return NotificationViewHolder(binding)
     }

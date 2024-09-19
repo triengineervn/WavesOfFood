@@ -2,42 +2,41 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".fragments.CartFragment">
+    tools:context=".activities.OrderSuccessActivity">
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/textView17"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/concise_cart"
+        android:layout_marginTop="@dimen/space_l"
+        android:text="@string/prompt_order_success"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.WavesOfFood.Title"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/cartRecyclerView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginVertical="@dimen/space_m"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_constraintBottom_toTopOf="@+id/proceedBtn"
+    <ImageView
+        android:layout_marginTop="@dimen/space_xl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/big_photo"
+        android:src="@drawable/order_success_illustration"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView10"
-        tools:listitem="@layout/cart_item" />
+        app:layout_constraintTop_toBottomOf="@+id/textView17" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/proceedBtn"
+        android:id="@+id/goBackBtn"
         style="@style/CustomStyle.WavesOfFood.PrimaryButton"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginBottom="@dimen/space_m"
-        android:text="@string/action_proceed"
+        android:layout_marginHorizontal="@dimen/space_s"
+        android:layout_marginBottom="@dimen/space_s"
+        android:text="@string/prompt_go_home"
+        android:textSize="@dimen/font_l"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

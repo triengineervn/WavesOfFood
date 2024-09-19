@@ -13,7 +13,6 @@ import com.denzcoskun.imageslider.models.SlideModel
 import com.example.wavesoffood.R
 import com.example.wavesoffood.adapters.PopularAdapter
 import com.example.wavesoffood.databinding.FragmentHomeBinding
-import com.example.wavesoffood.models.CartItem
 import com.example.wavesoffood.models.PopularItem
 
 
@@ -31,7 +30,7 @@ class HomeFragment : Fragment() {
         binding = FragmentHomeBinding.inflate(inflater, container, false)
 
         binding.viewMenuBtn.setOnClickListener {
-            val bottomSheetDialog = MenuBottomSheetFragment()
+            val bottomSheetDialog = MenuBottomFragment()
             bottomSheetDialog.show(parentFragmentManager, "Test")
         }
         return binding.root

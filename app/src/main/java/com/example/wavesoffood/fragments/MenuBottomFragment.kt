@@ -12,13 +12,11 @@ import com.example.wavesoffood.models.MenuItem
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
 
-class MenuBottomSheetFragment : BottomSheetDialogFragment() {
+class MenuBottomFragment : BottomSheetDialogFragment() {
     private lateinit var binding: FragmentMenuBottomSheetBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-        }
     }
 
     override fun onCreateView(

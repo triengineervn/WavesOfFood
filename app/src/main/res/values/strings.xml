@@ -28,7 +28,10 @@
     <string name="concise_buy_again">Buy again</string>
     <string name="concise_address">Address</string>
     <string name="concise_phone">Phone</string>
-
+    <string name="concise_notification">Notification</string>
+    <string name="concise_edit">Edit</string>
+    <string name="concise_payment_method">Payment Method</string>
+    <string name="concise_total_amount">Total Amount</string>
     <!--    prompt-->
     <string name="prompt_login">Login to your account</string>
     <string name="prompt_sign_up">Sign up here</string>
@@ -42,6 +45,9 @@
     <string name="prompt_search">What do you want to order?</string>
     <string name="prompt_re_buy">Buy again</string>
     <string name="prompt_save_info">Save Information</string>
+    <string name="prompt_place_order">Place my order</string>
+    <string name="prompt_order_success">Congrats\nYour Order Placed</string>
+    <string name="prompt_go_home">Go home</string>
     <!--    action-->
     <string name="action_proceed">Proceed</string>
 
@@ -57,5 +63,6 @@
     <string name="lorem_ipsum_email">loremipsum@email.com</string>
     <string name="lorem_ipsum_long">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</string>
     <string name="lorem_ipsum_phone">0123456789</string>
-    <string name="concise_notification">Notification</string>
+
+
 </resources>

@@ -14,6 +14,7 @@ import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
 class NotificationBottomFragment : BottomSheetDialogFragment() {
     private lateinit var binding: FragmentNotificationBottomBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
@@ -22,7 +23,7 @@ class NotificationBottomFragment : BottomSheetDialogFragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentNotificationBottomBinding.inflate(layoutInflater, container, false)
+        binding = FragmentNotificationBottomBinding.inflate(inflater, container, false)
         val notifications = mutableListOf(
             NotificationItem("Your Order has been Canceled Successfully", R.drawable.sad_emoji),
             NotificationItem("Order has been taken by the driver", R.drawable.delivery_green),

@@ -6,7 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:gravity="center"
-    tools:context=".fragments.MenuBottomSheetFragment">
+    tools:context=".fragments.MenuBottomFragment">
 
 
     <LinearLayout
@@ -34,6 +34,7 @@
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
+        tools:listitem="@layout/cart_item"
         android:id="@+id/menuRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />

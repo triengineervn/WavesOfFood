@@ -22,8 +22,9 @@
     </style>
 
     <style name="TextAppearance.WavesOfFood.Title" parent="TextAppearance.WavesOfFood.XLarge">
-        <item name="fontFamily">@font/lato_bold</item>
+        <item name="fontFamily">@font/yeon_sung_regular</item>
         <item name="android:textColor">@color/text_highlight</item>
+        <item name="android:textFontWeight">700</item>
     </style>
 
     <style name="TextAppearance.WavesOfFood.Subtitle" parent="TextAppearance.WavesOfFood.Large">
