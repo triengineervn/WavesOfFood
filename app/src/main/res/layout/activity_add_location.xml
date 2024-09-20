@@ -15,8 +15,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.google.android.material.textfield.TextInputLayout
+    <LinearLayout
         android:id="@+id/textInputLayout"
+        android:orientation="vertical"
         style="@style/CustomStyle.WavesOfFood.TextInput"
         android:layout_width="match_parent"
         android:layout_height="@dimen/text_input"
@@ -32,8 +33,20 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             style="@style/CustomStyle.WavesOfFood.NoUnderlineAutoCompleteTextView"
-            android:text="@string/prompt_add_location" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:hint="@string/prompt_add_location" />
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/nextBtn"
+        style="@style/CustomStyle.WavesOfFood.PrimaryButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_m"
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+        android:text="@string/concise_next"
+        app:layout_constraintBottom_toTopOf="@+id/textView6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView6"
