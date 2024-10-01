@@ -1,0 +1,85 @@
+{
+  "project_info": {
+    "project_number": "690950669805",
+    "firebase_url": "https://waves-of-food-66b78-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "waves-of-food-66b78",
+    "storage_bucket": "waves-of-food-66b78.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:690950669805:android:3b0121dc409fec412513e4",
+        "android_client_info": {
+          "package_name": "com.example.adminwavesoffood"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "690950669805-gnrb0igric446fi1dmej3u62sigrlelj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.adminwavesoffood",
+            "certificate_hash": "1ba21429b3eaed40fde41e940aa133d0da714bd2"
+          }
+        },
+        {
+          "client_id": "690950669805-ntcl7vph0o4i9bbjj0va1mmqfs99ief7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGqhrtIc_JeUocySLh2fAvPfrgDMutd1Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "690950669805-ntcl7vph0o4i9bbjj0va1mmqfs99ief7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:690950669805:android:28c0e217ecc1ef362513e4",
+        "android_client_info": {
+          "package_name": "com.example.wavesoffood"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "690950669805-uck5l6pji1ejakdl40vptui0hp419ffg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.wavesoffood",
+            "certificate_hash": "1ba21429b3eaed40fde41e940aa133d0da714bd2"
+          }
+        },
+        {
+          "client_id": "690950669805-ntcl7vph0o4i9bbjj0va1mmqfs99ief7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGqhrtIc_JeUocySLh2fAvPfrgDMutd1Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "690950669805-ntcl7vph0o4i9bbjj0va1mmqfs99ief7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
