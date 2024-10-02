@@ -34,7 +34,7 @@ class CartAdapter(
             binding.apply {
                 cartName.text = item.name
                 cartPrice.text = item.price
-                cartImage.setImageResource(item.imageResId)
+//                cartImage.setImageResource(item.imageResId!!)
 
                 increaseQuantityBtn.setOnClickListener {
                     item.quantity++

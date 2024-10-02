@@ -16,13 +16,13 @@ import com.example.wavesoffood.models.MenuItem
 class SearchFragment : Fragment() {
     private lateinit var binding: FragmentSearchBinding
     private val originalFoodMenu = mutableListOf(
-        MenuItem("Pizza", "$11", R.drawable.menu_photo_1),
-        MenuItem("Burger", "$8", R.drawable.menu_photo_2),
-        MenuItem("Pasta", "$12", R.drawable.menu_photo_1),
-        MenuItem("Chicken", "$11", R.drawable.menu_photo_1),
-        MenuItem("Beef", "$18", R.drawable.menu_photo_1),
-        MenuItem("Fish", "$21", R.drawable.menu_photo_1),
-        MenuItem("Eggs", "$2", R.drawable.menu_photo_1)
+        MenuItem("Pizza", "$11"),
+        MenuItem("Burger", "$8"),
+        MenuItem("Pasta", "$12"),
+        MenuItem("Chicken", "$11"),
+        MenuItem("Beef", "$18"),
+        MenuItem("Fish", "$21"),
+        MenuItem("Eggs", "$2")
     )
     private val filteredFoodMenu: MutableList<MenuItem> = originalFoodMenu.toMutableList()
 
@@ -68,7 +68,7 @@ class SearchFragment : Fragment() {
 
     private fun filterMenuItems(query: String) {
         val filteredList = originalFoodMenu.filter {
-            it.name.contains(query, ignoreCase = true)
+            it.name!!.contains(query, ignoreCase = true)
         }
 
         filteredFoodMenu.clear()

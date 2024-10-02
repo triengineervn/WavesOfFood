@@ -29,19 +29,19 @@ class CartFragment : Fragment() {
         binding = FragmentCartBinding.inflate(inflater, container, false)
 
         val cartItems = mutableListOf(
-            CartItem("Pizza", "$11", R.drawable.menu_photo_1, 1),
-            CartItem("Burger", "$8", R.drawable.menu_photo_2, 1),
-            CartItem("Pasta", "$12", R.drawable.menu_photo_1, 1),
-            CartItem("Chicken", "$11", R.drawable.menu_photo_1, 1),
-            CartItem("Beef", "$18", R.drawable.menu_photo_1, 1),
-            CartItem("Fish", "$21", R.drawable.menu_photo_1, 1),
-            CartItem("Eggs", "$2", R.drawable.menu_photo_1, 1)
+            CartItem("Pizza", "$11", "", 1),
+            CartItem("Burger", "$8", "", 1),
+            CartItem("Pasta", "$12", "", 1),
+            CartItem("Chicken", "$11", "", 1),
+            CartItem("Beef", "$18", "", 1),
+            CartItem("Fish", "$21", "", 1),
+            CartItem("Eggs", "$2", "", 1)
         )
 
         binding.proceedBtn.setOnClickListener {
             val intent = Intent(requireContext(), PaymentActivity::class.java)
             startActivity(intent)
-            
+
         }
 
         val adapter = CartAdapter()

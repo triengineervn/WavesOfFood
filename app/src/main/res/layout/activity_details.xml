@@ -45,10 +45,11 @@
             android:layout_marginTop="@dimen/space_s"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/lorem_ipsum_short"
+            android:text="@string/concise_description"
             android:textAppearance="@style/TextAppearance.WavesOfFood.Name" />
 
         <TextView
+            android:id="@+id/foodDescription"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/lorem_ipsum_long"
@@ -59,14 +60,15 @@
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/lorem_ipsum_short"
+            android:text="@string/concise_ingredients"
             android:textAppearance="@style/TextAppearance.WavesOfFood.Name" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            tools:listitem="@layout/ingredient_item"
-            android:id="@+id/ingredientRecyclerView"
+        <TextView
+            android:id="@+id/foodIngredients"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:text="@string/lorem_ipsum_short"
+            android:textAppearance="@style/TextAppearance.WavesOfFood.Caption" />
 
     </LinearLayout>
 

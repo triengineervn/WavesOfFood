@@ -33,13 +33,13 @@ class HistoryFragment : Fragment() {
 
     private fun setupRecyclerView() {
         val reBuyItems = mutableListOf(
-            ReBuyItem("Pizza", "$11", R.drawable.menu_photo_1),
-            ReBuyItem("Burger", "$8", R.drawable.menu_photo_2),
-            ReBuyItem("Pasta", "$12", R.drawable.menu_photo_1),
-            ReBuyItem("Chicken", "$11", R.drawable.menu_photo_1),
-            ReBuyItem("Beef", "$18", R.drawable.menu_photo_1),
-            ReBuyItem("Fish", "$21", R.drawable.menu_photo_1),
-            ReBuyItem("Eggs", "$2", R.drawable.menu_photo_1)
+            ReBuyItem("Pizza", "$11", ""),
+            ReBuyItem("Burger", "$8", ""),
+            ReBuyItem("Pasta", "$12", ""),
+            ReBuyItem("Chicken", "$11", ""),
+            ReBuyItem("Beef", "$18", ""),
+            ReBuyItem("Fish", "$21", ""),
+            ReBuyItem("Eggs", "$2", "")
         )
 
         reBuyAdapter = ReBuyAdapter(reBuyItems)

@@ -63,10 +63,10 @@ class HomeFragment : Fragment() {
 
 
         val popularItems = listOf(
-            PopularItem("Pizza", "$10", R.drawable.menu_photo_1),
-            PopularItem("Burger", "$8", R.drawable.menu_photo_2),
-            PopularItem("Pasta", "$12", R.drawable.menu_photo_3),
-            PopularItem("Chicken", "$10", R.drawable.menu_photo_1),
+            PopularItem("Pizza", "$10", ""),
+            PopularItem("Burger", "$8", ""),
+            PopularItem("Pasta", "$12", ""),
+            PopularItem("Chicken", "$10", ""),
         )
 
         val adapter = PopularAdapter(

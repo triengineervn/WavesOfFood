@@ -29,7 +29,7 @@ class PopularAdapter(
         holder.itemView.setOnClickListener {
             val intent = Intent(requireContext, DetailsActivity::class.java)
             intent.putExtra("MenuItemName", popularItems[position].name)
-            intent.putExtra("MenuItemImage", popularItems[position].imageResId)
+//            intent.putExtra("MenuItemImage", popularItems[position].imageResId)
             requireContext.startActivity(intent)
         }
     }
@@ -51,7 +51,7 @@ class PopularAdapter(
             binding.apply {
                 foodName.text = popularItems.name
                 foodPrice.text = popularItems.price
-                foodImage.setImageResource(popularItems.imageResId)
+//                foodImage.setImageResource(popularItems.imageResId!!)
 
                 root.setOnClickListener {
                     onItemClick(popularItems, adapterPosition)

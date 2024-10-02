@@ -1,7 +1,9 @@
 package com.example.wavesoffood.models
 
 open class BaseItem(
-    val name: String,
-    val price: String,
-    val imageResId: Int
+    open val name: String? = null,
+    open val price: String? = null,
+    open val image: String? = null,
+    open val description: String? = null,
+    open val ingredients: String? = null
 )

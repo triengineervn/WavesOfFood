@@ -18,6 +18,7 @@ firebaseAnalytics = "22.1.0"
 firebaseDatabase = "21.0.0"
 firebaseStorage = "21.0.0"
 playServicesAuth = "21.2.0"
+glide = "4.16.0"
 
 
 [libraries]
@@ -37,6 +38,7 @@ firebase-analytics = { group = "com.google.firebase", name = "firebase-analytics
 firebase-database = { group = "com.google.firebase", name = "firebase-database", version.ref = "firebaseDatabase" }
 firebase-storage = { group = "com.google.firebase", name = "firebase-storage", version.ref = "firebaseStorage" }
 play-services-auth = { module = "com.google.android.gms:play-services-auth", version.ref = "playServicesAuth" }
+glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

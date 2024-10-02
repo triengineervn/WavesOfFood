@@ -13,7 +13,7 @@ class ReBuyAdapter(private val reBuyItem: MutableList<ReBuyItem>) :
         fun bind(reBuyItem: ReBuyItem) {
             binding.foodName.text = reBuyItem.name
             binding.foodPrice.text = reBuyItem.price
-            binding.foodImage.setImageResource(reBuyItem.imageResId)
+//            binding.foodImage.setImageResource(reBuyItem.imageResId!!)
         }
 
     }
