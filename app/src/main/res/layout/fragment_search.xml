@@ -37,6 +37,7 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/menuRecyclerView"
+        tools:listitem="@layout/menu_item"
         android:layout_marginTop="@dimen/space_m"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

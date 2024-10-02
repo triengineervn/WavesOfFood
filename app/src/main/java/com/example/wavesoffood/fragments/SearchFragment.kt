@@ -1,6 +1,5 @@
 package com.example.wavesoffood.fragments
 
-import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,23 +7,16 @@ import android.view.ViewGroup
 import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.wavesoffood.R
 import com.example.wavesoffood.adapters.MenuAdapter
 import com.example.wavesoffood.databinding.FragmentSearchBinding
 import com.example.wavesoffood.models.MenuItem
+import com.google.firebase.database.FirebaseDatabase
 
 class SearchFragment : Fragment() {
     private lateinit var binding: FragmentSearchBinding
-    private val originalFoodMenu = mutableListOf(
-        MenuItem("Pizza", "$11"),
-        MenuItem("Burger", "$8"),
-        MenuItem("Pasta", "$12"),
-        MenuItem("Chicken", "$11"),
-        MenuItem("Beef", "$18"),
-        MenuItem("Fish", "$21"),
-        MenuItem("Eggs", "$2")
-    )
-    private val filteredFoodMenu: MutableList<MenuItem> = originalFoodMenu.toMutableList()
+    private lateinit var database: FirebaseDatabase
+    private val menuItems = mutableListOf<MenuItem>()
+    private val filteredFoodMenu: MutableList<MenuItem> = menuItems.toMutableList()
 
     private lateinit var adapter: MenuAdapter
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -47,7 +39,7 @@ class SearchFragment : Fragment() {
 
     private fun showAllMenu() {
         filteredFoodMenu.clear()
-        filteredFoodMenu.addAll(originalFoodMenu)
+        filteredFoodMenu.addAll(menuItems)
         adapter.notifyDataSetChanged()
     }
 
@@ -67,7 +59,7 @@ class SearchFragment : Fragment() {
     }
 
     private fun filterMenuItems(query: String) {
-        val filteredList = originalFoodMenu.filter {
+        val filteredList = menuItems.filter {
             it.name!!.contains(query, ignoreCase = true)
         }
 
