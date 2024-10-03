@@ -35,7 +35,6 @@ class HomeFragment : Fragment() {
         setupMenuButton()
         setupImageSlider()
         retrieveAndDisplayPopularItems()
-
         return binding.root
     }
 

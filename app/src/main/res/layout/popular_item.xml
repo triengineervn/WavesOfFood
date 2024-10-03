@@ -56,7 +56,7 @@
                     android:textAppearance="@style/TextAppearance.WavesOfFood.Title" />
 
                 <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/addCartBtn"
+                    android:id="@+id/addToCartBtn"
                     style="@style/CustomStyle.WavesOfFood.PrimaryButton.Small"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/button_w_xs"

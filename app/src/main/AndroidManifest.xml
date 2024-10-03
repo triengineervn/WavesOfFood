@@ -48,10 +48,10 @@
             android:exported="false" />
         <activity
             android:name=".activities.OrderSuccessActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".activities.DetailsActivity"
-            android:exported="false" />
+            android:exported="true" />
     </application>
 
 </manifest>
