@@ -57,7 +57,7 @@
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
                 android:ems="100"
-                android:text="@string/lorem_ipsum_short"
+                android:hint="@string/lorem_ipsum_short"
                 android:inputType="textPersonName"
                 android:textColor="@color/text_hint" />
 
@@ -73,6 +73,7 @@
             android:orientation="horizontal">
 
             <TextView
+                android:layout_gravity="start"
                 android:id="@+id/textView12"
                 android:layout_width="@dimen/short_title_spacing"
                 android:layout_height="wrap_content"
@@ -87,7 +88,7 @@
                 android:ems="100"
                 android:inputType="textMultiLine"
                 android:textColor="@color/text_hint"
-                android:text="@string/lorem_ipsum_long" />
+                android:hint="@string/invalid_empty" />
         </LinearLayout>
 
         <LinearLayout
@@ -113,7 +114,7 @@
                 android:background="@android:color/transparent"
                 android:ems="12"
                 android:inputType="phone"
-                android:text="@string/lorem_ipsum_phone"
+                android:hint="@string/invalid_empty"
                 android:textColor="@color/text_hint" />
         </LinearLayout>
 

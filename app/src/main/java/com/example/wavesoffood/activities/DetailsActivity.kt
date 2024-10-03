@@ -1,16 +1,13 @@
 package com.example.wavesoffood.activities
 
+import CartItem
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.example.wavesoffood.databinding.ActivityDetailsBinding
-import com.example.wavesoffood.models.CartItem
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
-import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.database.ValueEventListener
+import com.google.firebase.database.*
 
 class DetailsActivity : AppCompatActivity() {
 
@@ -18,35 +15,39 @@ class DetailsActivity : AppCompatActivity() {
         ActivityDetailsBinding.inflate(layoutInflater)
     }
 
-    private var foodName: String? = null
-    private var foodImage: String? = null
-    private var foodIngredients: String? = null
-    private var foodDescription: String? = null
-    private var foodPrice: String? = null
-
     private lateinit var auth: FirebaseAuth
 
+    private val foodName: String? by lazy { intent.getStringExtra("MenuItemName") }
+    private val foodImage: String? by lazy { intent.getStringExtra("MenuItemImage") }
+    private val foodIngredients: String? by lazy { intent.getStringExtra("MenuItemIngredients") }
+    private val foodDescription: String? by lazy { intent.getStringExtra("MenuItemDescription") }
+    private val foodPrice: String? by lazy { intent.getStringExtra("MenuItemPrice") }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         auth = FirebaseAuth.getInstance()
-        foodName = intent.getStringExtra("MenuItemName")
-        foodImage = intent.getStringExtra("MenuItemImage")
-        foodIngredients = intent.getStringExtra("MenuItemIngredients")
-        foodDescription = intent.getStringExtra("MenuItemDescription")
-        foodPrice = intent.getStringExtra("MenuItemPrice")
-        binding.backBtn.setOnClickListener {
-            finish()
-        }
 
+        setupUI()
+        setupListeners()
+    }
+
+    private fun setupUI() {
         binding.foodName.text = foodName
         Glide.with(this).load(foodImage).into(binding.foodImage)
         binding.foodDescription.text = foodDescription
         binding.foodIngredients.text = foodIngredients
+    }
+
+    private fun setupListeners() {
+        binding.backBtn.setOnClickListener { finish() }
 
         binding.addToCartBtn.setOnClickListener {
-            addItemToCart(foodName, foodImage, foodDescription, foodIngredients, foodPrice)
+            if (!foodName.isNullOrEmpty()) {
+                addItemToCart(foodName, foodImage, foodDescription, foodIngredients, foodPrice)
+            } else {
+                showToast("Food name is missing!")
+            }
         }
     }
 
@@ -57,76 +58,49 @@ class DetailsActivity : AppCompatActivity() {
         foodIngredients: String?,
         foodPrice: String?
     ) {
-        val userId = auth.currentUser?.uid ?: ""
-        val database =
-            FirebaseDatabase.getInstance().reference.child("users").child(userId).child("cart")
-        val cartItem =
-            CartItem(
-                foodName,
-                foodPrice,
-                foodImage,
-                foodDescription,
-                foodIngredients,
-                1
-            )
-        // save data to database
+        val userId = auth.currentUser?.uid ?: return showToast("User not authenticated")
+        val cartItem = CartItem(foodName, foodPrice, foodImage, foodDescription, foodIngredients, 1)
+        val database = getUserCartReference(userId)
+
         database.orderByChild("name").equalTo(foodName)
             .addListenerForSingleValueEvent(object : ValueEventListener {
                 override fun onDataChange(snapshot: DataSnapshot) {
                     if (snapshot.exists()) {
-                        for (data in snapshot.children) {
-                            val existingItem = data.getValue(CartItem::class.java)
-                            if (existingItem != null) {
-                                val newQuantity = existingItem.quantity!! + 1
-                                data.ref.child("quantity").setValue(newQuantity)
-                                    .addOnSuccessListener {
-                                        Toast.makeText(
-                                            this@DetailsActivity,
-                                            "Quantity updated successfully",
-                                            Toast.LENGTH_SHORT
-                                        ).show()
-                                        finish()
-                                    }
-                                    .addOnFailureListener {
-                                        Toast.makeText(
-                                            this@DetailsActivity,
-                                            "Failed to update quantity",
-                                            Toast.LENGTH_SHORT
-                                        ).show()
-                                    }
-                            }
-                        }
+                        updateExistingCartItem(snapshot)
                     } else {
-                        // Nếu không tồn tại thì thêm sản phẩm mới
-                        val newCartItemRef = database.push()
-                        newCartItemRef.setValue(cartItem)
-                            .addOnSuccessListener {
-                                Toast.makeText(
-                                    this@DetailsActivity,
-                                    "Item added to cart",
-                                    Toast.LENGTH_SHORT
-                                ).show()
-                                finish()
-                            }
-                            .addOnFailureListener {
-                                Toast.makeText(
-                                    this@DetailsActivity,
-                                    "Failed to add item",
-                                    Toast.LENGTH_SHORT
-                                ).show()
-                            }
+                        addNewCartItem(database, cartItem)
                     }
                 }
 
                 override fun onCancelled(error: DatabaseError) {
-                    Toast.makeText(
-                        this@DetailsActivity,
-                        "Error occurred: ${error.message}",
-                        Toast.LENGTH_SHORT
-                    ).show()
+                    showToast("Error occurred: ${error.message}")
                 }
             })
+    }
 
+    private fun getUserCartReference(userId: String): DatabaseReference {
+        return FirebaseDatabase.getInstance().reference.child("users").child(userId).child("cart")
+    }
 
+    private fun updateExistingCartItem(snapshot: DataSnapshot) {
+        for (data in snapshot.children) {
+            val existingItem = data.getValue(CartItem::class.java)
+            existingItem?.let {
+                val newQuantity = it.quantity!! + 1
+                data.ref.child("quantity").setValue(newQuantity)
+                    .addOnSuccessListener { showToast("Quantity updated successfully"); finish() }
+                    .addOnFailureListener { showToast("Failed to update quantity") }
+            }
+        }
+    }
+
+    private fun addNewCartItem(database: DatabaseReference, cartItem: CartItem) {
+        database.push().setValue(cartItem)
+            .addOnSuccessListener { showToast("Item added to cart"); finish() }
+            .addOnFailureListener { showToast("Failed to add item") }
+    }
+
+    private fun showToast(message: String) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
 }
