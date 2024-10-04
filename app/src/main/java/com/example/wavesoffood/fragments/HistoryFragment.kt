@@ -10,7 +10,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
-import com.example.wavesoffood.ReBuyDetailsActivity
+import com.example.wavesoffood.activities.ReBuyDetailsActivity
 import com.example.wavesoffood.adapters.ReBuyAdapter
 import com.example.wavesoffood.databinding.FragmentHistoryBinding
 import com.example.wavesoffood.models.OrdersModel
@@ -51,10 +51,9 @@ class HistoryFragment : Fragment() {
     }
 
     private fun goReBuyItem() {
-        listOfOrders.firstOrNull().let { reBuyItem ->
-            val intent = Intent(requireContext(), ReBuyDetailsActivity::class.java)
-
-        }
+        val intent = Intent(requireContext(), ReBuyDetailsActivity::class.java)
+        intent.putParcelableArrayListExtra("listOfOrders", ArrayList(listOfOrders))
+        startActivity(intent)
     }
 
     private fun retrieveHistoryOrders() {
