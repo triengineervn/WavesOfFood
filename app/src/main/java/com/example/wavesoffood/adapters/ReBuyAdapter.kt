@@ -1,19 +1,24 @@
 package com.example.wavesoffood.adapters
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.wavesoffood.databinding.ReBuyItemBinding
 import com.example.wavesoffood.models.ReBuyItem
 
-class ReBuyAdapter(private val reBuyItem: MutableList<ReBuyItem>) :
+class ReBuyAdapter(
+    private val reBuyItem: MutableList<ReBuyItem>,
+    private var requireContext: Context
+) :
     RecyclerView.Adapter<ReBuyAdapter.ReBuyViewHolder>() {
     class ReBuyViewHolder(private val binding: ReBuyItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun bind(reBuyItem: ReBuyItem) {
+        fun bind(reBuyItem: ReBuyItem, requireContext: Context) {
             binding.foodName.text = reBuyItem.name
             binding.foodPrice.text = reBuyItem.price
-//            binding.foodImage.setImageResource(reBuyItem.imageResId!!)
+            Glide.with(requireContext).load(reBuyItem.image).into(binding.foodImage)
         }
 
     }
@@ -28,6 +33,6 @@ class ReBuyAdapter(private val reBuyItem: MutableList<ReBuyItem>) :
     override
 
     fun onBindViewHolder(holder: ReBuyViewHolder, position: Int) {
-        holder.bind(reBuyItem[position])
+        holder.bind(reBuyItem[position], requireContext)
     }
 }

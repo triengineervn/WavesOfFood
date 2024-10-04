@@ -45,12 +45,15 @@
             android:windowSoftInputMode="adjustPan|adjustResize" />
         <activity
             android:name=".activities.PaymentActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".activities.OrderSuccessActivity"
             android:exported="true" />
         <activity
             android:name=".activities.DetailsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ReBuyDetailsActivity"
             android:exported="true" />
     </application>
 
