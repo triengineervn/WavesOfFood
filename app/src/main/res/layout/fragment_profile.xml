@@ -11,7 +11,16 @@
         android:orientation="vertical"
         android:padding="@dimen/activity_horizontal_margin">
 
+        <TextView
+            android:id="@+id/editProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:textAppearance="@style/TextAppearance.WavesOfFood.Highlight"
+            android:text="@string/prompt_edit" />
+
         <LinearLayout
+            android:layout_marginTop="@dimen/space_m"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/background_edit_text"
@@ -33,7 +42,7 @@
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
                 android:ems="100"
-                android:text="@string/lorem_ipsum_short"
+                android:hint="@string/invalid_empty"
                 android:inputType="textPersonName"
                 android:textAppearance="@style/TextAppearance.WavesOfFood.Hint" />
 
@@ -63,7 +72,7 @@
                 android:ems="100"
                 android:inputType="textMultiLine"
                 android:textAppearance="@style/TextAppearance.WavesOfFood.Caption"
-                android:text="@string/lorem_ipsum_long" />
+                android:hint="@string/invalid_empty" />
         </LinearLayout>
 
         <LinearLayout
@@ -83,14 +92,14 @@
                 android:text="@string/concise_email" />
 
             <EditText
-                android:id="@+id/gmailEditText"
+                android:id="@+id/emailEditText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
                 android:ems="100"
                 android:inputType="textEmailAddress"
                 android:textAppearance="@style/TextAppearance.WavesOfFood.Caption"
-                android:text="@string/lorem_ipsum_email" />
+                android:hint="@string/invalid_empty" />
         </LinearLayout>
 
         <LinearLayout
@@ -116,7 +125,7 @@
                 android:background="@android:color/transparent"
                 android:ems="12"
                 android:inputType="phone"
-                android:text="@string/lorem_ipsum_phone"
+                android:hint="@string/invalid_empty"
                 android:textAppearance="@style/TextAppearance.WavesOfFood.Caption" />
         </LinearLayout>
 
@@ -125,7 +134,7 @@
 
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn"
+        android:id="@+id/btnSaveInfo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/activity_horizontal_margin"

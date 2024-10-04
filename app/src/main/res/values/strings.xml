@@ -67,6 +67,7 @@
     <string name="concise_description">Short Description</string>
     <string name="concise_ingredients">Ingredients</string>
     <string name="invalid_empty">Empty</string>
+    <string name="prompt_edit"><u>Edit your profile</u></string>
 
 
 </resources>
