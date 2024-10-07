@@ -43,17 +43,14 @@ class MenuBottomFragment : BottomSheetDialogFragment() {
 
     private fun retrieveMenuItem() {
         database = FirebaseDatabase.getInstance()
-        val foodRef = database.getReference("users")
+        val foodRef = database.getReference("menu")
         foodRef.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
-                for (userSnapshot in dataSnapshot.children) {
-                    val menuSnapshot = userSnapshot.child("menu")
-                    for (menuItemSnapshot in menuSnapshot.children) {
-                        val menuItem = menuItemSnapshot.getValue(MenuItem::class.java)
-                        menuItem?.let { menuItems.add(it) }
-                    }
-                    setAdapter()
+                for (menuItemSnapshot in dataSnapshot.children) {
+                    val menuItem = menuItemSnapshot.getValue(MenuItem::class.java)
+                    menuItem?.let { menuItems.add(it) }
                 }
+                setAdapter()
             }
 
             private fun setAdapter() {

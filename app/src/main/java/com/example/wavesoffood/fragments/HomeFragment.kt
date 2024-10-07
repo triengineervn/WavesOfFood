@@ -68,17 +68,16 @@ class HomeFragment : Fragment() {
 
     private fun retrieveAndDisplayPopularItems() {
         database = FirebaseDatabase.getInstance()
-        val foodRef = database.getReference("users")
+        val foodRef = database.getReference("menu")
 
         foodRef.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 menuItems.clear()
-                dataSnapshot.children.forEach { userSnapshot ->
-                    val menuSnapshot = userSnapshot.child("menu")
-                    menuSnapshot.children.forEach { menuItemSnapshot ->
-                        menuItemSnapshot.getValue(MenuItem::class.java)?.let { menuItems.add(it) }
-                    }
+
+                dataSnapshot.children.forEach { menuItemSnapshot ->
+                    menuItemSnapshot.getValue(MenuItem::class.java)?.let { menuItems.add(it) }
                 }
+
                 displayPopularItems()
             }
 
