@@ -7,9 +7,12 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
+import com.example.wavesoffood.R
 import com.example.wavesoffood.activities.ReBuyDetailsActivity
 import com.example.wavesoffood.adapters.ReBuyAdapter
 import com.example.wavesoffood.databinding.FragmentHistoryBinding
@@ -44,10 +47,28 @@ class HistoryFragment : Fragment() {
         database = FirebaseDatabase.getInstance()
 
         retrieveHistoryOrders()
+
         binding.reBuyItem.setOnClickListener {
             goReBuyItem()
         }
+
+        binding.payBtn.setOnClickListener {
+            updatePaymentMethod()
+        }
+
         return binding.root
+    }
+
+    private fun updatePaymentMethod() {
+        val itemPushKey = listOfOrders.firstOrNull()?.itemPushKey
+        val completedOrderRef =
+            database.reference.child("users/${userId}/completedOrders/${itemPushKey}")
+        completedOrderRef.child("paymentReceived").setValue(true)
+        val historyOrderRef =
+            database.reference.child("users/${userId}/history/${itemPushKey}")
+        historyOrderRef.child("paymentReceived").setValue(true)
+        binding.payBtn.text = "Paid"
+        Toast.makeText(requireContext(), "The order was paid", Toast.LENGTH_SHORT).show()
     }
 
     private fun goReBuyItem() {
@@ -81,6 +102,7 @@ class HistoryFragment : Fragment() {
             private fun setDataInReBuyItem() {
                 binding.reBuyItem.visibility = View.VISIBLE
                 val reBuyItem = listOfOrders.firstOrNull()
+
                 reBuyItem.let {
                     with(binding) {
                         val firstCartItem = it?.cartItems?.firstOrNull()
@@ -94,6 +116,26 @@ class HistoryFragment : Fragment() {
                         listOfOrders.reverse()
                     }
                 }
+                val isOrderIsAccepted = listOfOrders.firstOrNull()?.orderAccepted
+                if (isOrderIsAccepted == false) {
+                    binding.payBtn.isEnabled = false
+                    binding.payBtn.setBackgroundColor(
+                        ContextCompat.getColor(
+                            requireContext(),
+                            R.color.divider
+                        )
+                    )
+                    binding.payBtn.setTextColor(
+                        ContextCompat.getColor(
+                            requireContext(),
+                            R.color.background
+                        )
+                    )
+                } else {
+                    binding.payBtn.isEnabled = true
+                    binding.payBtn.setBackgroundResource(R.drawable.background_primary_btn_s)
+                }
+
             }
 
             private fun setDataInReBuyRecyclerView() {

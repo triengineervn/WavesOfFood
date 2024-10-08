@@ -69,13 +69,15 @@
                 app:layout_constraintEnd_toEndOf="@+id/foodName"
                 app:layout_constraintStart_toEndOf="@+id/foodImage" />
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/foodStatus"
-                android:layout_marginEnd="@dimen/space_m"
-                app:cardCornerRadius="@dimen/corner_full"
-                app:cardBackgroundColor="@color/success"
-                android:layout_width="@dimen/button_w_xs"
-                android:layout_height="@dimen/button_w_xs"
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/payBtn"
+                style="@style/CustomStyle.WavesOfFood.PrimaryButton.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/space_s"
+                android:text="@string/concise_pay"
+                
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
