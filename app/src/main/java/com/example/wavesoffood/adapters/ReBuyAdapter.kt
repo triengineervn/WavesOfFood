@@ -17,7 +17,7 @@ class ReBuyAdapter(
         RecyclerView.ViewHolder(binding.root) {
         fun bind(reBuyItem: ReBuyItem, requireContext: Context) {
             binding.foodName.text = reBuyItem.name
-            binding.foodPrice.text = reBuyItem.price
+            binding.foodPrice.text = reBuyItem.price + "$"
             Glide.with(requireContext).load(reBuyItem.image).into(binding.foodImage)
         }
 

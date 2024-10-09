@@ -3,7 +3,6 @@ package com.example.wavesoffood.fragments
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,7 +12,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.example.wavesoffood.R
-import com.example.wavesoffood.activities.ReBuyDetailsActivity
+import com.example.wavesoffood.activities.HistoryOrdersActivity
 import com.example.wavesoffood.adapters.ReBuyAdapter
 import com.example.wavesoffood.databinding.FragmentHistoryBinding
 import com.example.wavesoffood.models.OrdersModel
@@ -69,7 +68,7 @@ class HistoryFragment : Fragment() {
     }
 
     private fun goReBuyItem() {
-        val intent = Intent(requireContext(), ReBuyDetailsActivity::class.java)
+        val intent = Intent(requireContext(), HistoryOrdersActivity::class.java)
         intent.putParcelableArrayListExtra("listOfOrders", ArrayList(listOfOrders))
         startActivity(intent)
     }
