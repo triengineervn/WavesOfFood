@@ -69,6 +69,8 @@
     <string name="invalid_empty">Empty</string>
     <string name="prompt_edit"><u>Edit your profile</u></string>
     <string name="concise_pay">Pay</string>
+    <string name="concise_location">Location:</string>
+    <string name="concise_time">Time:</string>
 
 
 </resources>

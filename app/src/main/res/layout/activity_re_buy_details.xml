@@ -39,7 +39,7 @@
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/reBuyRecyclerView"
+        android:id="@+id/historyOrdersRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginHorizontal="@dimen/space_xs"
@@ -49,6 +49,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        tools:listitem="@layout/re_buy_item" />
+        tools:listitem="@layout/history_order_item" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

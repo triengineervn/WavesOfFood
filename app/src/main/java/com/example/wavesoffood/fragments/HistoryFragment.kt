@@ -52,9 +52,6 @@ class HistoryFragment : Fragment() {
             goReBuyItem()
         }
 
-        binding.payBtn.setOnClickListener {
-            updatePaymentMethod()
-        }
 
         return binding.root
     }
@@ -113,11 +110,11 @@ class HistoryFragment : Fragment() {
                             Glide.with(requireContext()).load(uri).into(foodImage)
                         }
 
-                        listOfOrders.reverse()
                     }
                 }
-                val isOrderIsAccepted = listOfOrders.firstOrNull()?.orderAccepted
-                if (isOrderIsAccepted == false) {
+                val isOrderIsAccepted = listOfOrders[0].orderAccepted
+                val isPaid = listOfOrders[0].paymentReceived
+                if (!isOrderIsAccepted) {
                     binding.payBtn.isEnabled = false
                     binding.payBtn.setBackgroundColor(
                         ContextCompat.getColor(
@@ -134,6 +131,15 @@ class HistoryFragment : Fragment() {
                 } else {
                     binding.payBtn.isEnabled = true
                     binding.payBtn.setBackgroundResource(R.drawable.background_primary_btn_s)
+                }
+
+
+                binding.payBtn.setOnClickListener {
+                    updatePaymentMethod()
+                }
+
+                if (isPaid) {
+                    binding.payBtn.text = "Paid"
                 }
 
             }

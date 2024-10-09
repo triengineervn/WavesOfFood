@@ -151,7 +151,3 @@ class MenuAdapter(
 
     override fun getItemCount(): Int = menuItems.size
 }
-
-fun View.OnClickListener?.onClick(position: Int) {
-
-}

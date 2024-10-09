@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.wavesoffood.adapters.HistoryOrderAdapter
 import com.example.wavesoffood.adapters.ReBuyAdapter
 import com.example.wavesoffood.databinding.ActivityReBuyDetailsBinding
 import com.example.wavesoffood.models.OrdersModel
@@ -23,22 +24,8 @@ class ReBuyDetailsActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val listOfOrders = intent.getParcelableArrayListExtra<OrdersModel>("listOfOrders")
-        val reBuyItems = mutableSetOf<ReBuyItem>()
-        listOfOrders?.let { orders ->
-            if (orders.isNotEmpty()) {
-                for (order in orders) {
-                    order.cartItems?.forEach { cartItem ->
-                        val newItem = ReBuyItem(
-                            cartItem.name!!,
-                            "${cartItem.price!!} $", cartItem.image!!
-                        )
-                        reBuyItems.add(newItem)
-                    }
-                }
-                val uniqueReBuyItems = reBuyItems.toMutableList()
-                setAdapters(uniqueReBuyItems, this)
-            }
-        }
+
+        setAdapters(listOfOrders!!)
 
         binding.backBtn.setOnClickListener {
             finish()
@@ -46,10 +33,10 @@ class ReBuyDetailsActivity : AppCompatActivity() {
 
     }
 
-    private fun setAdapters(reBuyItems: MutableList<ReBuyItem>, context: Context) {
-        val recyclerView = binding.reBuyRecyclerView
+    private fun setAdapters(listOfOrders: MutableList<OrdersModel>) {
+        val recyclerView = binding.historyOrdersRecyclerView
         recyclerView.layoutManager = LinearLayoutManager(this)
-        val adapter = ReBuyAdapter(reBuyItems, context)
-        binding.reBuyRecyclerView.adapter = adapter
+        val adapter = HistoryOrderAdapter(listOfOrders)
+        binding.historyOrdersRecyclerView.adapter = adapter
     }
 }
